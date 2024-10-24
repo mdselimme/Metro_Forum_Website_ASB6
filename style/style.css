@@ -4,3 +4,15 @@
 *{
     font-family: "Mulish", sans-serif;
 }
+
+
+/* Banner Section  */
+
+.banner-head-text{
+    background: linear-gradient(90deg, #797DFC, #5254AD);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Banner Section  */
