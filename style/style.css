@@ -15,4 +15,8 @@
     -webkit-text-fill-color: transparent;
 }
 
+.active-bg{
+    background: #FF3434;
+}
+
 /* Banner Section  */
