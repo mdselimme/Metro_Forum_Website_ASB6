@@ -1,7 +1,9 @@
 
+// Fetch and load api data for showcase read post 
 const readPostList = [];
 const addReading = async (id) =>{
    
+    // Fetch Api Data 
     const res = await fetch("https://openapi.programming-hero.com/api/retro-forum/posts");
     const data = await res.json();
     const allData = data.posts;
@@ -16,7 +18,7 @@ const addReading = async (id) =>{
 };
 
 
-
+// Display Reding Post 
 const displayReadPost = (arr) =>{
     const readPostBox = document.getElementById("readpost");
     document.getElementById("read_count").innerText = arr.length;
