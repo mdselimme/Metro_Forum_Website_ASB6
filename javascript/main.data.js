@@ -6,9 +6,8 @@ const postAllData = async () =>{
     const allData = data.posts;
     const postBox = document.getElementById("post-div-box");
     allData.forEach(element => {
-        console.log(element);
         const divBox = document.createElement("div");
-        divBox.classList.add("discussion-box", "rounded-3xl", "bg-[#F3F3F5]", "p-12", "flex", "items-start" , "mb-8")
+        divBox.classList.add("discussion-box", "rounded-3xl", "bg-[#F3F3F5]", "p-12", "flex", "justify-between", "items-start" , "mb-8")
         divBox.innerHTML = `
 
                         <div class="w-[10%] mr-5 relative">
@@ -16,7 +15,7 @@ const postAllData = async () =>{
                             <div id="${element.id}" class="w-4 h-4 absolute top-1 right-1 active-bg rounded-full"></div>
                         </div>
     
-                        <div class="col-span-7">
+                        <div class="w-[90%]">
     
                             <div class="mb-2">
                                 <span class="text-[14px] text-[#12132DCC] mr-3">#${element.category}</span>
@@ -35,15 +34,13 @@ const postAllData = async () =>{
                                     <li class="mr-5 text-base font-normal text-[#12132D99]"><i class="fa-solid fa-eye mr-2"></i> ${element.view_count}</li>
                                     <li class="text-base font-normal text-[#12132D99]"><i class="fa-regular fa-clock mr-2"></i> ${element.posted_time} min</li>
                                 </ul>
-                                <img src="./images/email.png" alt="email">
+                                <img onclick="addReading(${element.id})" src="./images/email.png" alt="email">
                             </div>
-    
                         </div> 
                    
         `;
         postBox.appendChild(divBox);
         if(element.isActive){
-            console.log("find");
             document.getElementById(`${element.id}`).classList.remove("active-bg");
             document.getElementById(`${element.id}`).classList.add("bg-[#10B981]");
         }
