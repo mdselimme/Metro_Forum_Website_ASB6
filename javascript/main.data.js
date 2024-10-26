@@ -1,7 +1,7 @@
 
 // Find and Display all Post Data 
 const postAllData = (data) =>{
-    
+    loadingSpinner(true);
     const postBox = document.getElementById("post-div-box");
     postBox.textContent = "";
     // Though loop on data and display in the frontend 
@@ -47,5 +47,6 @@ const postAllData = (data) =>{
             document.getElementById(`${element.id}`).classList.add("bg-[#10B981]");
         }
     });
+    loadingSpinner(false);
 };
 
