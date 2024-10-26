@@ -1,14 +1,11 @@
 
 // Find and Display all Post Data 
-const postAllData = async () =>{
-    // Fetch Api Data 
-    const res = await fetch("https://openapi.programming-hero.com/api/retro-forum/posts");
-    const data = await res.json();
-    const allData = data.posts;
+const postAllData = (data) =>{
+    
     const postBox = document.getElementById("post-div-box");
-
+    postBox.textContent = "";
     // Though loop on data and display in the frontend 
-    allData.forEach(element => {
+    data.forEach(element => {
         const divBox = document.createElement("div");
         divBox.classList.add("discussion-box", "rounded-3xl", "bg-[#F3F3F5]", "p-12", "flex", "justify-between", "items-start" , "mb-8")
         divBox.innerHTML = `
@@ -52,4 +49,3 @@ const postAllData = async () =>{
     });
 };
 
-postAllData();

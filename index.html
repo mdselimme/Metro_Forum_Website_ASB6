@@ -70,8 +70,8 @@
                                     <h1 class="text-[64px] font-black mb-5 leading-[86px]">Welcome to the <br><span class="banner-head-text">ReTro</span> Forum</h1>
                                     <p class="text-[#FFFFFFCC] text-xl font-medium leading-[36px] mb-10">Share your favorite opinion and win and wp <br> forum coffee mug!</p>
                                     <div class="bg-white w-auto p-2 flex justify-between rounded-full">
-                                        <input class="w-full px-3 text-lg text-black outline-none" type="text" placeholder="Search your desire">
-                                        <button class="py-2 rounded-full font-bold text-xl px-8 bg-[#797DFC] text-white" type="submit" class="cursor-pointer">Search</button>
+                                        <input id="input-data" class="w-full px-3 text-lg text-black outline-none" type="text" placeholder="Search your desire">
+                                        <button onclick="searchByCategory()" class="py-2 rounded-full font-bold text-xl px-8 bg-[#797DFC] text-white" type="submit" class="cursor-pointer">Search</button>
                                     </div>
                                 </div>
                                 
@@ -206,10 +206,13 @@
      <!-- Footer Section end Here  -->
 
     <!-- Javascript File Connection Here  -->
+     <!-- Latest Post Section Start Here  -->
+     <script src="./javascript/searchbycategory.js"></script>
      <script src="./javascript/main.data.js"></script>
      <!-- Add reading Js link Here  -->
       <script src="./javascript/add_reading.js"></script>
       <!-- Latest Post Section Start Here  -->
        <script src="./javascript/latestpost.js"></script>
+      
 </body>
 </html>
